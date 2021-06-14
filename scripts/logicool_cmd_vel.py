@@ -46,7 +46,7 @@ class JoyTwist(object):
             twist.linear.x = joy_msg.axes[1] * 0.4
             twist.angular.z = joy_msg.axes[0] * 3.14 / 32 * 15
             self._smooth_twist_pub.publish(twist)
-            self.smooth_flag = True;
+            self.smooth_flag = True
         else:
             twist.linear.x = 0
             twist.angular.z = 0
